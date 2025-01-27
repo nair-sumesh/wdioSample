@@ -13,10 +13,7 @@ Given(/^I am on the (\w+) page$/, async (page) => {
 });
 
 When(/^I login with (\w+) and (.+)$/, async (username, password) => {
-    
-    await browser.setPermissions({ name: 'clipboard-read' }, 'granted');
-    await browser.setPermissions({ name: 'clipboard-write' }, 'granted');
-    
+        
     await LoginPage.login(username, password)
 });
 
